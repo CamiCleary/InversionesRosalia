@@ -35,15 +35,12 @@ La aplicación, desarrollada con **Python, PyQt6 y Qt WebEngine**, ofrece un sis
 git clone https://github.com/tu-usuario/inversiones-rosalia.git
 cd inversiones-rosalia
 
-# Instalar dependencias
-pip install -r requirements.txt
-
 ```
 ## Uso
 ### Ejecutar la aplicación:
 
-```bash
-python main.py
+```
+Instala la dependencia de powershell y corre setup.ps1
 ```
 
 ## Estructura del Proyecto

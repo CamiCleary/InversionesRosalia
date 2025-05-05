@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosalías · Sistema de Gestión</title>
+  <!-- Vincula tu CSS principal -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Tipografía base -->
+  <style>
+    body { font-family: 'Times New Roman', serif; margin: 0; padding: 0; }
+    header, nav, main, footer { padding: 1rem; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+    nav a { text-decoration: none; }
+  </style>
+</head>
+<body>
+  <!-- Cabecera con logo y título -->
+  <header>
+    <div class="logo">
+      <!-- Sustituye con la ruta real de tu logo -->
+      <img src="images/logo-rosalias.png" alt="Logo Rosalías" height="50">
+    </div>
+    <h1>Rosalías · Panel de Administración</h1>
+  </header>
+
+  <!-- Navegación principal -->
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="clientes.html">Clientes</a></li>
+      <li><a href="ordenes.html">Órdenes</a></li>
+      <li><a href="inventario.html">Inventario</a></li>
+      <li><a href="empleados.html">Empleados</a></li>
+      <li><a href="ajustes.html">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Área principal de contenido -->
+  <main>
+    <!-- Aquí irán los distintos módulos según la sección -->
+    <section id="dashboard">
+      <h2>Bienvenido, Administrador</h2>
+      <p>Selecciona una sección del menú para comenzar.</p>
+      <!-- Por ejemplo: Widgets de resumen -->
+      <div class="widgets">
+        <!-- Ejemplo de widget -->
+        <div class="widget">
+          <h3>Órdenes Pendientes</h3>
+          <p>12</p>
+        </div>
+        <div class="widget">
+          <h3>Productos en Inventario</h3>
+          <p>245</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Rosalías Taller de Costura. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Vincula tus scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
