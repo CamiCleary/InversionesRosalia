@@ -7,10 +7,10 @@ if (Test-Path $venvPath) {
     & "$venvPath\Scripts\Activate.ps1"
 } else {
     # Crear el entorno virtual si no existe
-    Write-Host "El entorno virtual no existe. Creandolo en la carpeta 'frontend'..."
+    Write-Host "El entorno virtual no existe. Creandolo en la carpeta raiz"
     python -m venv $venvPath
 
-    # Activar el entorno virtual después de crearlo
+    # Activar el entorno virtual despues de crearlo
     Write-Host "Activando entorno virtual recién creado..."
     & "$venvPath\Scripts\Activate.ps1"
 }
@@ -24,6 +24,6 @@ if (Test-Path requeriments.txt) {
 }
 
 
-Write-Host "Instalación completada. ¡Ya estás listo para trabajar!, Corriendo el main"
+Write-Host "Instalacion completada. ¡Ya estas listo para trabajar!, Corriendo el main"
 
 & C:/Users/ElAdagioDeJP/Documents/GitHub/InversionesRosalia/venv/Scripts/python.exe c:/Users/ElAdagioDeJP/Documents/GitHub/InversionesRosalia/src/main.py
