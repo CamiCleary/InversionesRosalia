@@ -40,7 +40,7 @@ cd inversiones-rosalia
 ### Ejecutar la aplicación:
 
 ```
-Instala la dependencia de powershell y corre setup.ps1
+Instala la extenseion de powershell del vscode y corre setup.ps1
 ```
 
 ## Estructura del Proyecto
