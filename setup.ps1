@@ -26,4 +26,4 @@ if (Test-Path requeriments.txt) {
 
 Write-Host "Instalacion completada. ¡Ya estas listo para trabajar!, Corriendo el main"
 
-& C:/Users/ElAdagioDeJP/Documents/GitHub/InversionesRosalia/venv/Scripts/python.exe c:/Users/ElAdagioDeJP/Documents/GitHub/InversionesRosalia/src/main.py
+& C:\Users\pc\Desktop\inversiones-rosalia\InversionesRosalia\venv\Scripts\python.exe C:\Users\pc\Desktop\inversiones-rosalia\InversionesRosalia\src\main.py
