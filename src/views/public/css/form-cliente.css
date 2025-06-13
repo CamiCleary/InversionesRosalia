@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fondo completamente blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    /* Sombra difuminada con color vinotinto */
+    box-shadow: 0 4px 20px rgba(128, 0, 32, 0.2); /* rgba(R, G, B, alpha) - 128, 0, 32 es un vinotinto oscuro */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"], 
+.form-group select { 
+    width: calc(100% - 20px); /* Ajusta el padding para que no se desborde */
+    padding: 12px 10px;
+    border: 1px solid #dddddd;
+    border-radius: 20px; /* Bordes más ovalados */
+    font-size: 16px;
+    background-color: #f9f9f9; /* Fondo de los inputs */
+    color: #333333;
+    /* Para los select, es importante quitar la apariencia por defecto del navegador */
+    -webkit-appearance: none; /* Chrome, Safari, Opera */
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* Estándar */
+    /* Opcional: Un pequeño icono de flecha hacia abajo si lo deseas para el select */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px;
+    cursor: pointer;
+}
+
+.form-group select{
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="%23555" viewBox="0 0 10 10"><path d="M0 2.5L5 7.5L10 2.5z"/></svg>');
+}
+
+
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="password"]::placeholder {
+    color: #aaaaaa;
+}
+
+.btn-submit {
+    background-color: #7e1b23; /* Color de fondo original del botón */
+    color: white; /* Color de texto original del botón */
+    padding: 12px 25px;
+    border: none;
+    /* Bordes más ovalados para el botón */
+    border-radius: 20px; /* Incrementado para hacerlo más ovalado */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición para ambos colores */
+    width: auto;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: white; /* Fondo blanco al pasar el mouse */
+    color: #7e1b23; /* Color de texto vinotinto al pasar el mouse */
+    border: 1px solid #7e1b23; /* Añadir un borde del color vinotinto para que se vea mejor */
+}
+
+
+/* --- Nuevos estilos para el botón "Devolver" --- */
+.btn-devolver-container {
+    position: absolute; /* Posicionamiento absoluto dentro de .login-container */
+    top: 20px; /* Distancia desde la parte superior del .login-container */
+    right: 20px; /* Distancia desde la derecha del .login-container */
+    z-index: 10; /* Asegura que esté por encima de otros elementos si es necesario */
+}
+
+.btn-devolver {
+    /* Reutilizamos los mismos estilos que .btn-submit */
+    background-color: #7e1b23; /* Mismo color de fondo */
+    color: white; /* Mismo color de texto */
+    padding: 12px 25px; /* Mismo padding */
+    border: none;
+    border-radius: 20px; /* Mismos bordes ovalados */
+    font-size: 16px; /* Misma fuente */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Misma transición */
+}
+
+.btn-devolver:hover {
+    /* Reutilizamos los mismos estilos hover que .btn-submit:hover */
+    background-color: white;
+    color: #7e1b23;
+    border: 1px solid #7e1b23;
+}

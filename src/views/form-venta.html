@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Venta - Rosalia's</title>
+    <link rel="stylesheet" href="public/css/form-venta.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="btn-devolver-container">
+            <a href="ventas.html"><button class="btn-devolver">Devolver</button></a>
+        </div>
+        <h1>Registrar nueva Venta</h1>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresa el apellido">
+            </div>
+            <div class="form-group">
+                <label for="identificacion">Identificación</label>
+                <select name="identificacion" id="identificacion">
+                    <option value="V">V</option>
+                    <option value="E">E</option>
+                    <option value="J">J</option>                                        
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="documento">Documento</label>
+                <input type="text" id="documento" name="documento" placeholder="Ingresa el documento">
+            </div>
+            <div class="form-group">
+                <label for="telefeno">Teléfono</label>
+                <input type="number" id="telefeno" name="telefeno" placeholder="Ingresa su telefeno">
+            </div>
+            <div class="form-group">
+                <label for="dirección">Dirección</label>
+                <input type="text" id="dirección" name="dirección" placeholder="Ingresa su dirección">
+            </div>                        
+            <button type="submit" class="btn-submit">Añadir</button>
+        </form>
+    </div>
+</body>
+</html>
