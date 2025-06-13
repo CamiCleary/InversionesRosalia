@@ -1,0 +1,400 @@
+:root {
+  --color-rosalia-red: #7a2029;
+  --color-bg-light: #faf8f8;
+  --color-text-primary: #050505;
+  --color-text-secondary: #7a7a91;
+  --color-card-bg: #faebeb;
+  --spacing: 16px;
+  --border-radius: 12px;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--color-bg-light);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* Added */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: var(--color-rosalia-red);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing);
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 10px; /* Changed from 24px */
+}
+
+.sidebar-logo img {
+  max-width: 140px;
+  height: auto;
+  object-fit: contain; /* Added */
+}
+
+.sidebar-title {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  user-select: none; /* Added */
+}
+
+nav.sidebar-nav {
+  /* Added rule for nav.sidebar-nav */
+  flex-grow: 1;
+}
+
+.sidebar-nav .nav-list {
+  list-style: none;
+}
+
+.nav-list li {
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+
+.nav-list li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color var(--transition);
+  color: white;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Iconos de la barra - Added from inicio.css */
+.material-icons.sidebar-icon {
+  font-size: 20px;
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.sidebar-footer img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid white;
+}
+
+.sidebar-footer .user-text {
+  /* Added */
+  line-height: 1.2;
+}
+
+.sidebar-footer .user-name {
+  /* Added */
+  font-weight: 600;
+}
+
+.user-role {
+  color: #f0dcdc;
+}
+
+/* MAIN CONTENT */
+main.content {
+  padding: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER SECCIÓN CLIENTES */
+.clients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 16px; Removed, handled by .section-header */
+}
+
+.section-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px; /* Added margin-bottom */
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-new {
+  background-color: var(--color-rosalia-red);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btn-new:hover {
+  background-color: #5c181f;
+}
+
+.btn-arrow {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: color var(--transition);
+}
+
+.btn-arrow:hover {
+  color: var(--color-text-primary);
+}
+
+/* PESTAÑAS */
+.tabs {
+  display: flex;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.tabs li {
+  margin-right: 24px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 0;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: color var(--transition), border-bottom var(--transition);
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active,
+.tab:hover {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-rosalia-red);
+}
+
+/* SUBTÍTULO */
+.clients-subtitle {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* LISTA DE CLIENTES */
+.clients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.client-card {
+  background: white;
+  padding: 12px 16px;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color var(--transition);
+  cursor: pointer;
+}
+
+.client-card:hover {
+  background-color: var(--color-card-bg);
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-name {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.client-email {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.client-time {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .app-container {
+    grid-template-columns: 1fr;
+  }
+  /* Updated sidebar responsive styles to match inicio.css */
+  aside.sidebar {
+    height: auto;
+    padding-bottom: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+  }
+  .sidebar-logo {
+    /* Added from inicio.css responsive */
+    flex-shrink: 0;
+    margin-right: 24px;
+  }
+  nav.sidebar-nav {
+    /* Added from inicio.css responsive */
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    overflow-x: auto;
+  }
+  .nav-list {
+    /* Added from inicio.css responsive */
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin: 0;
+  }
+  .nav-list li {
+    /* Added from inicio.css responsive */
+    margin-bottom: 0;
+  }
+  .nav-list li a {
+    /* Added from inicio.css responsive */
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .sidebar-footer {
+    /* Added from inicio.css responsive */
+    display: none;
+  }
+
+  main.content {
+    padding: 20px 16px; /* Changed from padding: 16px */
+  }
+  .clients-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  /* 1) Hacer el botón “Nuevo cliente” más pill-shaped */
+  .btn-new {
+    border-radius: 999px;
+  }
+
+  /* 2) Línea divisoria justo debajo de las pestañas */
+  .tabs {
+    display: flex;
+    list-style: none;
+    padding-bottom: 8px; /* espacio interno para que no choque el borde */
+    margin-bottom: 16px; /* espacio con el subtítulo */
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  /* 3) Ajustar márgenes del subtítulo */
+  .clients-subtitle {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+  }
+
+  /* 4) Quitar gap y background de los cards para usar separadores tipo tabla */
+  .clients-list {
+    display: block; /* apilar sin gaps */
+  }
+
+  .client-card {
+    background: none; /* sin fondo blanco */
+    padding: 12px 0; /* padding vertical */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0; /* quitar redondeo */
+    cursor: pointer;
+    transition: background-color var(--transition);
+  }
+
+  .client-card:last-child {
+    border-bottom: none; /* sin línea en el último */
+  }
+
+  .client-card:hover {
+    background-color: var(--color-card-bg);
+  }
+
+  /* 5) Pequeño ajuste al título de sección */
+  .section-header {
+    font-size: 1.4rem; /* un pelín más grande */
+    margin: 0; /* el espacio lo controla .clients-header/márgenes */
+  }
+
+  /* 6) Refinar el contenedor de cabecera para que se parezca más */
+  .clients-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px; /* menos separación con las pestañas */
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+}

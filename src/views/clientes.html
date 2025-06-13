@@ -1,1 +1,96 @@
-hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="public/css/cliente.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <aside class="sidebar" role="navigation" aria-label="Menú principal">
+            <div class="sidebar-logo">
+                <img src="/public/image/logo.png" alt="Logo">
+                <div class="sidebar-title">Inversiones Rosalia`s</div>
+            </div>   
+            
+            <nav class="sidebar-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="/views/inicio.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/public/image/inicio.png" alt="Inicio" width="15"></span> Inicio</a></li>
+                    <li><a href="#" class="active"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/public/image/clientes.png" alt="Clientes" width="15"></span> Clientes</a></li>
+                    <li><a href="#"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/public/image/produccion.png" alt="Producción" width="15"></span> Producción</a></li>
+                    <li><a href="#"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/public/image/contabilidad.png" alt="Contabilidad" width="15"></span> Contabilidad</a></li>
+                    <li><a href="#"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/public/image/almacen.png" alt="Almacén" width="15"></span> Almacén</a></li>
+                    <li><a href="#"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/public/image/pincel.png" alt="Diseño" width="15"></span> Diseño</a></li>
+                    <li><a href="#"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/public/image/ventas.png" alt="Ventas" width="15"></span> Ventas</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer" aria-label="Información de usuario">
+                <img src="/public/image/admin.jpg" alt="Avatar de Nervis Carpio" />
+                <div class="user-text">
+                    <div class="user-name">Nervis Carpio</div>
+                    <div class="user-role">Administradora</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content" role="main">
+            <section class="clients" aria-label="Lista de Clientes">
+                <div class="clients-header">
+                    <h2 class="section-header">Lista de clientes</h2>
+                    <div class="header-actions">
+                        <button class="btn-new">Nuevo cliente</button>
+                        <button class="btn-arrow" aria-label="Ir adelante">&rarr;</button>
+                    </div>
+                </div>
+
+                <ul class="tabs" role="tablist" aria-label="Filtrar clientes">
+                    <li role="presentation"><button role="tab" aria-selected="true" class="tab active">Todos</button></li>
+                    <li role="presentation"><button role="tab" aria-selected="false" class="tab">Activos</button></li>
+                    <li role="presentation"><button role="tab" aria-selected="false" class="tab">Inactivos</button></li>
+                </ul>
+
+                <p class="clients-subtitle">Clientes registrados</p>
+
+                <div class="clients-list">
+                    <article class="client-card" tabindex="0" aria-labelledby="client1-title client1-desc">
+                        <div class="client-info">
+                            <img src="/src/views/public/image/avatar1.jpg" alt="Ana Ruiz" class="avatar">
+                            <div>
+                                <p id="client1-title" class="client-name"><strong>Ana Ruiz</strong></p>
+                                <p id="client1-desc" class="client-email">ana.ruiz@email.com</p>
+                            </div>
+                        </div>
+                        <p class="client-time">Hace 2 días</p>
+                    </article>
+
+                    <article class="client-card" tabindex="0" aria-labelledby="client2-title client2-desc">
+                        <div class="client-info">
+                            <img src="/src/views/public/image/avatar2.jpg" alt="Carlos Pérez" class="avatar">
+                            <div>
+                                <p id="client2-title" class="client-name"><strong>Carlos Pérez</strong></p>
+                                <p id="client2-desc" class="client-email">carlos.perez@email.com</p>
+                            </div>
+                        </div>
+                        <p class="client-time">Hace 5 días</p>
+                    </article>
+
+                    <article class="client-card" tabindex="0" aria-labelledby="client3-title client3-desc">
+                        <div class="client-info">
+                            <img src="/src/views/public/image/avatar3.jpg" alt="Lucía Gómez" class="avatar">
+                            <div>
+                                <p id="client3-title" class="client-name"><strong>Lucía Gómez</strong></p>
+                                <p id="client3-desc" class="client-email">lucia.gomez@email.com</p>
+                            </div>
+                        </div>
+                        <p class="client-time">Hace 1 mes</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
