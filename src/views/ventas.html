@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lista de Clientes - Inversiones Rosalia's</title>
+<title>Ventas - Inversiones Rosalia's</title>
 <link rel="stylesheet" href="public/css/clientes.css">
 <style>
 
@@ -25,12 +25,12 @@
         <nav class="sidebar-nav" aria-label="Navegación principal">
           <ul class="nav-list">
             <li><a href="/src/views/inicio.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/inicio.png" alt="incio"  width="15"></span> Inicio</a></li>
-            <li><a href="/src/views/clientes.html" class="active"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/clientes.png" alt="incio"  width="15"></span> Clientes</a></li>
+            <li><a href="/src/views/clientes.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/clientes.png" alt="incio"  width="15"></span> Clientes</a></li>
             <li><a href="/src/views/produccion.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/produccion.png" alt="incio"  width="15"></span> Producción</a></li>
             <li><a href="/src/views/contabilidad.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/contabilidad.png" alt="incio"  width="15"></span> Contabilidad</a></li>
             <li><a href="/src/views/almacen.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/almacen.png" alt="incio"  width="15"></span> Almacén</a></li>
             <li><a href="/src/views/diseno.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/pincel.png" alt="incio"  width="15"></span> Diseño</a></li>
-            <li><a href="/src/views/ventas.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/ventas.png" alt="incio"  width="15"></span> Ventas</a></li>
+            <li><a href="/src/views/ventas.html" class="active"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/ventas.png" alt="incio"  width="15"></span> Ventas</a></li>
             </ul>
         </nav>
     </div>
@@ -44,35 +44,36 @@
     </aside>
 
     <main class="content" role="region" aria-label="Contenido principal - lista de clientes">
-      <h1 class="section-title">Lista de clientes</h1>
-      <button class="btn-new-client" type="button" aria-label="Agregar nuevo cliente">Nuevo cliente</button>
+      <h1 class="section-title">Ventas recientes</h1>
+      <button class="btn-new-client" type="button" aria-label="Agregar nuevo cliente">Añadir</button>
 
       <div class="client-tabs" role="tablist" aria-label="Filtrar clientes">
         <button class="active" role="tab" aria-selected="true" tabindex="0">Todos</button>
-        <button class="inactive" role="tab" aria-selected="false" tabindex="-1">Activos</button>
-        <button class="inactive" role="tab" aria-selected="false" tabindex="-1">Inactivos</button>
+        <button class="inactive" role="tab" aria-selected="false" tabindex="-1">Pendientes</button>
+        <button class="inactive" role="tab" aria-selected="false" tabindex="-1">Pagadas</button>
+        <button class="inactive" role="tab" aria-selected="false" tabindex="-1">Enviadas</button>
       </div>
 
       <section>
         <div class="clients-list" aria-label="Clientes registrados">
-          <div class="list-header">Clientes registrados</div>
+          <div class="list-header">Lista de Ventas</div>
           <div class="client-row">
-            <img class="client-avatar" src="#" alt="Avatar de Ana Ruiz" draggable="false" />
-            <div class="client-name">Ana Ruiz</div>
-           <div class="client-email">ana.ruiz@email.com</div>
-            <div class="client-last-activity">Hace 2 días</div>
+            <img  draggable="false" />
+            <div class="client-name">Pedido #1023</div>
+           <div class="client-email">Cliente: Laura G</div>
+            <div class="client-last-activity">Pendiente</div>
           </div>
           <div class="client-row">
-            <img class="client-avatar" src="#" alt="Avatar de Carlos Pérez" draggable="false" />
-            <div class="client-name">Carlos Pérez</div>
-            <div class="client-email">carlos.perez@email.com</div>
-            <div class="client-last-activity">Hace 5 días</div>
+<img  draggable="false" />
+            <div class="client-name">Pedido #1022</div>
+            <div class="client-email">Cliente: Ana Ruiz</div>
+            <div class="client-last-activity">Pagada</div>
           </div>
           <div class="client-row">
-            <img class="client-avatar" src="#" alt="Avatar de Lucía Gómez" draggable="false" />
-            <div class="client-name">Lucía Gómez</div>
-            <div class="client-email">lucia.gomez@email.com</div>
-            <div class="client-last-activity">Hace 1 mes</div>
+            <img  draggable="false" />
+            <div class="client-name">Pedido #1022</div>
+            <div class="client-email">Cliente: Maria S.</div>
+            <div class="client-last-activity">Enviada</div>
           </div>
         </div>
       </section>

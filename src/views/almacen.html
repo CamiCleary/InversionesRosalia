@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Inversiones Rosalia's</title>
-    <link rel="stylesheet" href="public/css/inicio.css">
+    <title>Almacen - Inversiones Rosalia's</title>
+    <link rel="stylesheet" href="public/css/almacen.css">
         <style type="text/css">
             
         </style>
@@ -23,11 +23,11 @@
         
         <nav class="sidebar-nav" aria-label="Navegación principal">
           <ul class="nav-list">
-            <li><a href="/src/views/inicio.html"class="active" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/inicio.png" alt="incio"  width="15"></span> Inicio</a></li>
+            <li><a href="/src/views/inicio.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/inicio.png" alt="incio"  width="15"></span> Inicio</a></li>
             <li><a href="/src/views/clientes.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/clientes.png" alt="incio"  width="15"></span> Clientes</a></li>
             <li><a href="/src/views/produccion.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/produccion.png" alt="incio"  width="15"></span> Producción</a></li>
             <li><a href="/src/views/contabilidad.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/contabilidad.png" alt="incio"  width="15"></span> Contabilidad</a></li>
-            <li><a href="/src/views/almacen.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/almacen.png" alt="incio"  width="15"></span> Almacén</a></li>
+            <li><a href="/src/views/almacen.html"class="active" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/almacen.png" alt="incio"  width="15"></span> Almacén</a></li>
             <li><a href="/src/views/diseno.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/pincel.png" alt="incio"  width="15"></span> Diseño</a></li>
             <li><a href="/src/views/ventas.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="/src/views/public/image/ventas.png" alt="incio"  width="15"></span> Ventas</a></li>
             </ul>
@@ -44,58 +44,64 @@
 
     <main class="content" role="main">
       <section class="summary" aria-label="Resumen general">
-        <h2 class="section-header">Resumen general</h2>
+        <h2 class="section-header">Inventario General</h2>
         <div class="summary-cards">
           <article class="summary-card" tabindex="0" aria-labelledby="clientes-title clientes-desc">
             <span class="material-icons card-icon" aria-hidden="true"><img src="/src/views/public/image/clientes.png" alt="incio"  width="15"></span>
             <div>
-              <p id="clientes-desc" class="subtitle">Clientes</p>
-              <p id="clientes-title" class="amount"><strong>120 registrados</strong></p>
-              <p class="subtitle">Clientes activos este mes</p>
+              <p id="clientes-desc" class="subtitle">Materiales</p>
+              <p id="clientes-title" class="amount"><strong>58 tipos</strong></p>
+              <p class="subtitle">Variedad en stock</p>
             </div>
           </article>
           <article class="summary-card" tabindex="0" aria-labelledby="produccion-title produccion-desc">
             <span class="material-icons card-icon" aria-hidden="true"><img src="/src/views/public/image/produccion.png" alt="incio"  width="15"></span>
             <div>
-              <p id="produccion-desc" class="subtitle">Producción</p>
-              <p id="produccion-title" class="amount"><strong>35 pedidos</strong></p>
-              <p class="subtitle">Órdenes en proceso</p>
+              <p id="produccion-desc" class="subtitle">Bajo stock</p>
+              <p id="produccion-title" class="amount"><strong>6 stock</strong></p>
+              <p class="subtitle">Materiales por reponer</p>
             </div>
           </article>
         <article class="summary-card" tabindex="0" aria-labelledby="ventas-title ventas-desc">
             <span class="material-icons card-icon" aria-hidden="true"><img src="/src/views/public/image/ventas.png" alt="incio"  width="15"></span>
             <div>
-              <p id="ventas-desc" class="subtitle">Ventas</p>
-              <p id="ventas-title" class="amount"><strong>$12,500</strong></p>
-              <p class="subtitle">Ingresos este mes</p>
+              <p id="ventas-desc" class="subtitle">Entradas</p>
+              <p id="ventas-title" class="amount"><strong>12 recientes</strong></p>
+              <p class="subtitle">Ultimos ingresos</p>
             </div>
           </article>
         </div>
       </section>
 
       <section class="recent-activity" aria-label="Actividad reciente">
-        <h2 class="section-header">Actividad reciente</h2>
+        <h2 class="section-header">Movimientos recientes</h2>
         <ul class="activity-list">
           <li>
             <span class="material-icons activity-icon" aria-hidden="true"><img src="/src/views/public/image/clientes.png" alt="incio"  width="15"></span>
             <div class="activity-details">
-              <Nuevo cliente: strong>Ana Ruiz</strong> 
+              Tela Algodon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Entrada de Material</span>
+                
             </div>
             <time class="activity-time" datetime="PT2H">hace 2 horas</time>
             <span class="material-icons activity-arrow" aria-hidden="true"></span>
           </li>
           <li>
-            <span class="material-icons activity-icon" aria-hidden="true"><img src="/src/views/public/image/produccion.png" alt="incio"  width="15"></span>
+            <span class="material-icons activity-icon" aria-hidden="true"><img src="/src/views/public/image/clientes.png" alt="incio"  width="15"></span>
             <div class="activity-details">
-              Pedido #2345 
+              Hilo Azul    &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Salida para produccion</span>
             </div>
+            
             <time class="activity-time" datetime="PT1H">hace 1 hora</time>
             <span class="material-icons activity-arrow" aria-hidden="true"></span>
           </li>
+
           <li>
             <span class="material-icons activity-icon" aria-hidden="true"><img src="/src/views/public/image/ventas.png" alt="incio"  width="15"></span>
             <div class="activity-details">
-              Venta realizada 
+              Botones metalicos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Stock bajo</span>
             </div>
             <time class="activity-time" datetime="PT30M">hace 30 min</time>
             <span class="material-icons activity-arrow" aria-hidden="true"></span>

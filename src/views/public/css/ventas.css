@@ -1,0 +1,293 @@
+    /* Variables */
+  :root {
+    --color-rosalia-red: #7a2029;
+    --color-bg-light: #faf8f8;
+    --color-text-primary: #050505;
+    --color-text-secondary: #7a7a91;
+    --color-card-bg: #faebeb;
+    --spacing: 16px;
+    --border-radius: 10px;
+    --transition: 0.3s ease;
+  }
+
+  
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg-light);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+ 
+  .app-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+  }
+
+  /* LA SIDEBAR */
+  aside.sidebar {
+    background-color: var(--color-rosalia-red);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--spacing);
+  }
+
+  /* PAL LOGUITO*/
+  .sidebar-logo {
+    margin-bottom: 10px;
+    text-align: center;
+
+  }
+  .sidebar-logo img {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+  }
+  .sidebar-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 12px;
+    user-select: none;
+  }
+
+  /* LA BARRA DE NAVEGACION XD */
+  nav.sidebar-nav {
+    flex-grow: 1;
+  }
+  .nav-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .nav-list li {
+    margin-bottom: 12px;
+  }
+  .nav-list li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transition);
+    color: white;
+  }
+  .nav-list li a:hover,
+  .nav-list li a.active {
+    background-color: rgba(255 255 255 / 0.15);
+  }
+
+  /* Iconos de la barra*/ 
+  .material-icons.sidebar-icon {
+    font-size: 20px;
+    filter: brightness(0) saturate(100%) invert(100%);
+
+/* Iconos de la actividad*/
+  }
+    .material-icons.activity-icon {
+    font-size: 20px;
+  }
+
+  /* Iconos del resumen*/
+    .material-icons.card-icon {
+    font-size: 10px;
+  }
+
+
+  /* ESTO SERIA EL PUTO FOOTER*/
+  .sidebar-footer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+  .sidebar-footer img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgb(244, 244, 244);
+  }
+  .sidebar-footer .user-text {
+    line-height: 1.2;
+  }
+  .sidebar-footer .user-name {
+    font-weight: 600;
+  }
+  .sidebar-footer .user-role {
+    color: #f0dcdc;
+  }
+  /* MAIN CONTENT */
+  main.content {
+    padding: 48px 48px 48px 48px;
+    overflow-y: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  main.content h1.section-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+
+  /* Nuevo cliente button */
+  .btn-new-client {
+    background-color: #b84f53;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: fit-content;
+    margin-bottom: 28px;
+    transition: background-color 0.3s ease;
+  }
+  .btn-new-client:hover {
+    background-color: #9b4043;
+  }
+
+  /* Tabs */
+  .client-tabs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+  .client-tabs button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 6px 0;
+    color: #555;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+
+  .client-tabs button.active {
+    border-bottom-color: #111;
+    color: #111;
+  }
+  .client-tabs button.inactive {
+    color: #aaa;
+    cursor: default;
+  }
+
+  /* Clients list */
+  .clients-list {
+    font-size: 0.9rem;
+  }
+
+  .clients-list .list-header {
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .client-row {
+    display: grid;
+    grid-template-columns: 48px 1fr 2fr 1fr;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    gap: 16px;
+  }
+
+  /* Imagenes pequeños circulares */
+  .client-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    user-select: none;
+  }
+
+  .client-name {
+    font-weight: 500;
+  }
+
+  .client-email {
+    color: #555;
+  }
+
+  .client-last-activity {
+    text-align: right;
+    color: #777;
+    font-size: 0.85rem;
+    user-select: none;
+  }
+
+  /* Flecha derecha superior */
+  .top-arrow {
+    align-self: start;
+    justify-self: end;
+    cursor: pointer;
+  }
+  .top-arrow .material-icons {
+    font-size: 24px;
+    color: #111;
+  }
+
+  /* Ajustes responsive */
+  @media (max-width: 767px) {
+    .app-container {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    aside.sidebar {
+      flex-direction: row;
+      padding: 12px 16px;
+      height: 72px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sidebar .logo img {
+      width: 110px;
+    }
+    nav.menu {
+      display: none; /* esconder menú en móvil para hamburger (no implementado aquí) */
+    }
+    .sidebar .user-info {
+      display: none;
+    }
+    main.content {
+      padding: 24px 16px;
+    }
+    .client-row {
+      grid-template-columns: 40px 1fr;
+      gap: 12px;
+    }
+    .client-email, .client-last-activity {
+      display: none;
+    }
+    .top-arrow {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .app-container {
+      max-width: 1400px;
+    }
+  }

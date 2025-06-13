@@ -1,0 +1,320 @@
+    /* Variables */
+  :root {
+    --color-rosalia-red: #7a2029;
+    --color-bg-light: #faf8f8;
+    --color-text-primary: #050505;
+    --color-text-secondary: #7a7a91;
+    --color-card-bg: #faebeb;
+    --spacing: 16px;
+    --border-radius: 10px;
+    --transition: 0.3s ease;
+  }
+
+  
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg-light);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+ 
+  .app-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+  }
+
+  /* LA SIDEBAR */
+  aside.sidebar {
+    background-color: var(--color-rosalia-red);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--spacing);
+  }
+
+  /* PAL LOGUITO*/
+  .sidebar-logo {
+    margin-bottom: 10px;
+    text-align: center;
+
+  }
+  .sidebar-logo img {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+  }
+  .sidebar-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 12px;
+    user-select: none;
+  }
+
+  /* LA BARRA DE NAVEGACION XD */
+  nav.sidebar-nav {
+    flex-grow: 1;
+  }
+  .nav-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .nav-list li {
+    margin-bottom: 12px;
+  }
+  .nav-list li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transition);
+    color: white;
+  }
+  .nav-list li a:hover,
+  .nav-list li a.active {
+    background-color: rgba(255 255 255 / 0.15);
+  }
+
+  /* Iconos de la barra*/ 
+  .material-icons.sidebar-icon {
+    font-size: 20px;
+    filter: brightness(0) saturate(100%) invert(100%);
+
+/* Iconos de la actividad*/
+  }
+    .material-icons.activity-icon {
+    font-size: 20px;
+  }
+
+  /* Iconos del resumen*/
+    .material-icons.card-icon {
+    font-size: 10px;
+  }
+
+
+  /* ESTO SERIA EL PUTO FOOTER*/
+  .sidebar-footer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+  .sidebar-footer img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgb(244, 244, 244);
+  }
+  .sidebar-footer .user-text {
+    line-height: 1.2;
+  }
+  .sidebar-footer .user-name {
+    font-weight: 600;
+  }
+  .sidebar-footer .user-role {
+    color: #f0dcdc;
+  }
+  /* Clients list */
+  .clients-list {
+    font-size: 0.9rem;
+  }
+
+  .clients-list .list-header {
+    font-weight: 200;
+    margin-bottom: 14px;
+  }
+
+  .client-row {
+    display: grid;
+    grid-template-columns: 48px 1fr 2fr 1fr;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    gap: 16px;
+  }
+
+
+  .client-name {
+        padding-left: 12px;
+    color: var(--color-text-primary);
+  }
+
+  .client-email {
+    color: #555;
+  }
+
+  .client-last-activity {
+    text-align: right;
+    color: #777;
+    font-size: 0.85rem;
+    user-select: none;
+  }
+  /*EL MAIN */
+  main.content {
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* TITULOS */
+  h2.section-header {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  
+  .summary-cards {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+
+  
+  .summary-card {
+    background-color: var(--color-card-bg);
+    color: var(--color-text-primary);
+    border-radius: var(--border-radius);
+    padding: 20px 24px;
+    flex: 1 1 100px;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .summary-card .card-icon {
+    background-color: white;
+    color: var(--color-rosalia-red);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+  }
+  .summary-card strong {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .summary-card .amount {
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  .summary-card .subtitle {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  /* ACTIVIDAD RECIENTE */
+  .recent-activity {
+    max-width: 800px;
+  }
+  .activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .activity-list li {
+    display: grid;
+    grid-template-columns: 30px 1fr auto 20px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+  }
+  .activity-list li:last-child {
+    border-bottom: none;
+  }
+  .activity-icon {
+    color: var(--color-rosalia-red);
+    font-size: 18px;
+  }
+  .activity-details {
+    padding-left: 12px;
+    color: var(--color-text-primary);
+  }
+  .activity-details strong {
+    font-weight: 600;
+  }
+  .activity-time {
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    padding-left: 12px;
+  }
+  .activity-arrow {
+    color: var(--color-text-secondary);
+    font-size: 20px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 767px) {
+    .app-container {
+      grid-template-columns: 1fr;
+    }
+
+    aside.sidebar {
+      height: auto;
+      padding-bottom: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      padding: 12px;
+    }
+    .sidebar-logo {
+      flex-shrink: 0;
+      margin-right: 24px;
+    }
+    nav.sidebar-nav {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      overflow-x: auto;
+    }
+    .nav-list {
+      display: flex;
+      gap: 20px;
+      flex-direction: row;
+      margin: 0;
+    }
+    .nav-list li {
+      margin-bottom: 0;
+    }
+    .nav-list li a {
+      padding: 8px 10px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .sidebar-footer {
+      display: none;
+    }
+    main.content {
+      padding: 20px 16px;
+    }
+    .summary-cards {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
