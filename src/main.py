@@ -20,7 +20,7 @@ bridge = Bridge(view)
 channel.registerObject('pyObject', bridge)
 view.page().setWebChannel(channel)
 
-html_path = Path(__file__).parent / 'views' / 'inicio.html'
+html_path = Path(__file__).parent / 'views' / 'login.html'
 view.load(QUrl.fromLocalFile(str(html_path.absolute())))
 
 view.show()
