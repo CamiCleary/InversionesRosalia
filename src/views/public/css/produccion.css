@@ -1,0 +1,389 @@
+        /* Variables */
+        
+        :root {
+            --color-rosalia-red: #7a2029;
+            --color-bg-light: #faf8f8;
+            --color-text-primary: #050505;
+            --color-text-secondary: #7a7a91;
+            --color-card-bg: #faebeb;
+            --spacing: 16px;
+            --border-radius: 12px;
+            --transition: 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--color-bg-light);
+            color: var(--color-text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .app-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+
+        /* LA SIDEBAR */
+        aside.sidebar {
+            background-color: var(--color-rosalia-red);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: var(--spacing);
+        }
+
+        /* PAL LOGUITO*/
+        .sidebar-logo {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .sidebar-logo img {
+            max-width: 140px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .sidebar-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 12px;
+            user-select: none;
+        }
+
+        /* LA BARRA DE NAVEGACION XD */
+        nav.sidebar-nav {
+            flex-grow: 1;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .nav-list li {
+            margin-bottom: 12px;
+        }
+
+        .nav-list li a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color var(--transition);
+            color: white;
+        }
+
+        .nav-list li a:hover,
+        .nav-list li a.active {
+            background-color: rgba(255 255 255 / 0.15);
+        }
+
+        /* Iconos de la barra*/
+        .material-icons.sidebar-icon {
+            font-size: 20px;
+            filter: brightness(0) saturate(100%) invert(100%);
+        }
+
+        /* Iconos de la actividad*/
+        .material-icons.activity-icon {
+            font-size: 20px;
+        }
+
+        /* Iconos del resumen*/
+        .material-icons.card-icon {
+            font-size: 10px;
+        }
+
+        /* ESTO SERIA EL PUTO FOOTER*/
+        .sidebar-footer {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .sidebar-footer img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1.5px solid white;
+        }
+
+        .sidebar-footer .user-text {
+            line-height: 1.2;
+        }
+
+        .sidebar-footer .user-name {
+            font-weight: 600;
+        }
+
+        .sidebar-footer .user-role {
+            color: #f0dcdc;
+        }
+
+        /*EL MAIN */
+        main.content {
+            padding: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* TITULOS */
+        h2.section-header {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* Navegación superior */
+        .top-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .top-navigation .path span {
+            margin: 0 5px;
+        }
+
+        .top-navigation .arrow-back {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Sección de Ficha de Diseño */
+        .design-sheet {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .design-image-card {
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .design-image-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+        }
+
+        .design-details-card {
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .design-details-card .detail-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .design-details-card .detail-label {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .design-details-card .detail-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--color-text-primary);
+        }
+
+        /* Detalles adicionales (Estado, Responsable, Fecha entrega) */
+        .additional-details {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .detail-card {
+            background-color: var(--color-card-bg);
+            color: var(--color-text-primary);
+            border-radius: var(--border-radius);
+            padding: 20px 24px;
+            flex: 1 1 150px;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .detail-card strong {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .detail-card .subtitle {
+            color: var(--color-text-secondary);
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        /* Historial de cambios */
+        .change-history {
+            max-width: 800px;
+        }
+
+        .history-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .history-list li {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto; /* Ajustado para el prototipo */
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+            color: var(--color-text-primary);
+        }
+
+        .history-list li:last-child {
+            border-bottom: none;
+        }
+
+        .history-item {
+            color: var(--color-text-primary);
+        }
+
+        .history-time {
+            color: var(--color-text-secondary);
+            font-size: 0.85rem;
+            text-align: right; /* Alineado a la derecha como en el prototipo */
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 767px) {
+            .app-container {
+                grid-template-columns: 1fr;
+            }
+
+            aside.sidebar {
+                height: auto;
+                padding-bottom: 12px;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                padding: 12px;
+            }
+
+            .sidebar-logo {
+                flex-shrink: 0;
+                margin-right: 24px;
+            }
+
+            nav.sidebar-nav {
+                display: flex;
+                flex-grow: 1;
+                align-items: center;
+                overflow-x: auto;
+            }
+
+            .nav-list {
+                display: flex;
+                gap: 20px;
+                flex-direction: row;
+                margin: 0;
+            }
+
+            .nav-list li {
+                margin-bottom: 0;
+            }
+
+            .nav-list li a {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+                white-space: nowrap;
+            }
+
+            .sidebar-footer {
+                display: none;
+            }
+
+            main.content {
+                padding: 20px 16px;
+            }
+
+            .design-sheet {
+                grid-template-columns: 1fr;
+            }
+
+            .additional-details {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .history-list li {
+                grid-template-columns: 1fr 1fr; /* Ajuste para móviles */
+                gap: 10px;
+            }
+            .history-time {
+                text-align: left;
+            }
+        }
+
+/* Botón Volver */
+        .top-navigation .volver-button {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Espacio entre icono y texto */
+            background-color: var(--color-rosalia-red); /* Fondo rojo por defecto */
+            border: 1.5px solid var(--color-rosalia-red); /* Borde rojo por defecto */
+            color: white; /* Texto blanco por defecto */
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 8px 18px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .top-navigation .volver-button:hover {
+            background-color: transparent; /* Fondo transparente al pasar el ratón */
+            color: var(--color-rosalia-red); /* Texto rojo al pasar el ratón */
+            border-color: var(--color-rosalia-red); /* Borde rojo al pasar el ratón */
+        }
+
+        .top-navigation .volver-button i {
+            font-size: 18px;
+        }

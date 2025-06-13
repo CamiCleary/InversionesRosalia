@@ -1,68 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rosalías · Sistema de Gestión</title>
-  <!-- Vincula tu CSS principal -->
-  <link rel="stylesheet" href="/src/views/public/css/styles.css" />  
-  <!-- Tipografía base -->
-  <style>
-    body { font-family: 'Times New Roman', serif; margin: 0; padding: 0; }
-    header, nav, main, footer { padding: 1rem; }
-    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
-    nav a { text-decoration: none; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño - Inversiones Rosalia's</title>
+    <link rel="stylesheet" href="/src/views/public/css/produccion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!-- Cabecera con logo y título -->
-  <header>
-    <div class="logo">
-      <!-- Sustituye con la ruta real de tu logo -->
-      <img src="/views/images/logo-rosalia.png" alt="Logo Rosalías" height="50">
+
+        <div class="app-container">
+            
+    <aside class="sidebar" role="navigation" aria-label="Menú principal">
+        <div class="sidebar-logo">
+          <img src="public/image/logo.png" alt="Logo" >
+          <div class="sidebar-title">Inversiones Rosalia`s</div>
+        </div>   
+        
+      <div>
+
+        
+        <nav class="sidebar-nav" aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li><a href="inicio.html"class="active" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/inicio.png" alt="incio"  width="15"></span> Inicio</a></li>
+            <li><a href="clientes.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/clientes.png" alt="incio"  width="15"></span> Clientes</a></li>
+            <li><a href="produccion.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/produccion.png" alt="incio"  width="15"></span> Producción</a></li>
+            <li><a href="contabilidad.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/contabilidad.png" alt="incio"  width="15"></span> Contabilidad</a></li>
+            <li><a href="almacen.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/almacen.png" alt="incio"  width="15"></span> Almacén</a></li>
+            <li><a href="ventas.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/ventas.png" alt="incio"  width="15"></span> Ventas</a></li>
+            </ul>
+        </nav>
     </div>
-    <h1>Rosalías · Panel de Administración</h1>
-  </header>
-
-  <!-- Navegación principal -->
-  <nav>
-    <ul>
-      <li><a href="dashboard.html">Dashboard</a></li>
-      <li><a href="clientes.html">Clientes</a></li>
-      <li><a href="ordenes.html">Órdenes</a></li>
-      <li><a href="inventario.html">Inventario</a></li>
-      <li><a href="empleados.html">Empleados</a></li>
-      <li><a href="ajustes.html">Ajustes</a></li>
-    </ul>
-  </nav>
-
-  <!-- Área principal de contenido -->
-  <main>
-    <!-- Aquí irán los distintos módulos según la sección -->
-    <section id="dashboard">
-      <h2>Bienvenido, Administrador</h2>
-      <p>Selecciona una sección del menú para comenzar.</p>
-      <!-- Por ejemplo: Widgets de resumen -->
-      <div class="widgets">
-        <!-- Ejemplo de widget -->
-        <div class="widget">
-          <h3>Órdenes Pendientes</h3>
-          <p>122</p>
+      <div class="sidebar-footer" aria-label="Información de usuario">
+        <img src="public/image/admin.jpg" alt="Avatar de Nervis Carpio" />
+        <div class="user-text">
+          <div class="user-name">Nervis Carpio</div>
+          <div class="user-role">Administradora</div>
+          </div>
         </div>
-        <div class="widget">
-          <h3>Productos en Inventario</h3>
-          <p>245</p>
-        </div>
-      </div>
-    </section>
-  </main>
+    </aside>
 
-  <!-- Pie de página -->
-  <footer>
-    <p>&copy; 2025 Rosalías Taller de Costura. Todos los derechos reservados.</p>
-  </footer>
 
-  <!-- Vincula tus scripts -->
-  <script src="js/app.js"></script>
+        <main class="content" role="main">
+            <div class="top-navigation">
+                <div class="path">
+                    <span>Producción</span>
+                    <span>&gt;</span>
+                    <strong>Diseño</strong>
+                </div>
+                <a href="">
+                <button class="volver-button" onclick="history.back()">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Devolver</span>
+                </button>
+                </a>
+            </div>
+
+            <section class="design-section" aria-label="Design sheet">
+                <h2 class="section-header">Ficha de diseño</h2>
+                <div class="design-sheet">
+              
+                    <article class="design-details-card" tabindex="0" aria-label="Design details">
+                        <div class="detail-item">
+                            <p class="detail-label">Nombre</p>
+                            <p class="detail-value">Vestido verano</p>
+                        </div>
+                        <div class="detail-item">
+                            <p class="detail-label">Diseño</p>
+                            <p class="detail-value">El diseño ideal para temporada cálida</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="additional-details-section" aria-label="Additional details">
+                <h2 class="section-header">Detalles</h2>
+                <div class="additional-details">
+                    <article class="detail-card" tabindex="0">
+                        <p class="subtitle">Estado</p>
+                        <strong>En desarrollo</strong>
+                        <p class="subtitle">Proceso aprobado, en confección</p>
+                    </article>
+                    <article class="detail-card" tabindex="0">
+                        <p class="subtitle">Cliente</p>
+                        <strong>Ana Ruiz</strong>
+                        <p class="subtitle">C.I.: 12.345.678 <br> Tel: 0412-1234567</p>
+                    </article>
+                    <article class="detail-card" tabindex="0">
+                        <p class="subtitle">Fecha entrega</p>
+                        <strong>15/07/2024</strong>
+                        <p class="subtitle">Entrega estimada</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
+</html>
+
 </html>

@@ -1,0 +1,428 @@
+/* Variables */
+:root {
+    --color-rosalia-red: #7a2029;
+    --color-bg-light: #faf8f8;
+    --color-text-primary: #050505;
+    --color-text-secondary: #7a7a91;
+    --color-card-bg: #faebeb;
+    --spacing: 16px;
+    --border-radius: 12px;
+    --transition: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg-light);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+/* LA SIDEBAR */
+aside.sidebar {
+    background-color: var(--color-rosalia-red);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--spacing);
+}
+
+/* PAL LOGUITO*/
+.sidebar-logo {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sidebar-logo img {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+.sidebar-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 12px;
+    user-select: none;
+}
+
+/* LA BARRA DE NAVEGACION XD */
+nav.sidebar-nav {
+    flex-grow: 1;
+}
+
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin-bottom: 12px;
+}
+
+.nav-list li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transition);
+    color: white;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+    background-color: rgba(255 255 255 / 0.15);
+}
+
+/* Iconos de la barra*/
+.material-icons.sidebar-icon {
+    font-size: 20px;
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+/* Iconos de la actividad (estos estilos ya no se utilizan directamente con la nueva estructura de la lista, pero se mantienen por si acaso) */
+.material-icons.activity-icon {
+    font-size: 20px;
+}
+
+/* Iconos del resumen */
+.material-icons.card-icon {
+    font-size: 10px;
+}
+
+/* ESTO SERIA EL PUTO FOOTER*/
+.sidebar-footer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.sidebar-footer img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid white;
+}
+
+.sidebar-footer .user-text {
+    line-height: 1.2;
+}
+
+.sidebar-footer .user-name {
+    font-weight: 600;
+}
+
+.sidebar-footer .user-role {
+    color: #f0dcdc;
+}
+
+/*EL MAIN */
+main.content {
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TITULOS */
+h2.section-header {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* Navegación superior */
+.top-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.top-navigation .path span {
+    margin: 0 5px;
+}
+
+/* SECCIÓN DE ESTILOS DEL BOTÓN "VOLVER" (este botón no está en la página de Producción, pero el CSS se mantiene para referencia general si se usa en otras páginas) */
+.top-navigation .volver-button {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    background-color: var(--color-rosalia-red); 
+    border: 1.5px solid var(--color-rosalia-red); 
+    color: white; 
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.top-navigation .volver-button:hover {
+    background-color: transparent; 
+    color: var(--color-rosalia-red); 
+    border-color: var(--color-rosalia-red); 
+}
+
+.top-navigation .volver-button i {
+    font-size: 18px;
+}
+/* FIN DE LA SECCIÓN DE ESTILOS DEL BOTÓN "VOLVER" */
+
+
+/* Sección de Resumen de Producción (sin cambios) */
+.summary-section {
+    margin-bottom: 48px;
+}
+
+.summary-cards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.summary-card {
+    background-color: var(--color-card-bg);
+    color: var(--color-text-primary);
+    border-radius: var(--border-radius);
+    padding: 20px 24px;
+    flex: 1 1 180px; /* Base flexible para 3-4 columnas */
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.summary-card .card-icon {
+    background-color: white;
+    color: var(--color-rosalia-red);
+    border-radius: 50%;
+    width: 38px; /* Tamaño del icono */
+    height: 38px; /* Tamaño del icono */
+    display: grid;
+    place-items: center;
+    font-size: 20px; /* Tamaño del icono dentro del círculo */
+}
+.summary-card strong {
+    font-weight: 700;
+    font-size: 1.3rem; /* Tamaño más grande para los valores */
+}
+.summary-card .subtitle {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+/* Fin Sección de Resumen de Producción */
+
+
+/* SECCIÓN DE ESTILOS PARA LA NUEVA ESTRUCTURA DE ACTIVIDAD RECIENTE (Lista de Pedidos de Producción) */
+.recent-activity-section {
+    max-width: 1000px; /* Ampliar ancho para la tabla */
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white; /* Fondo blanco para la lista, como en la imagen de "Lista de Ventas" */
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave para que parezca una tarjeta */
+}
+
+.activity-list li {
+    display: grid;
+    /* Columnas para: # Pedido, Cliente, Prenda, Fecha, % Pago, Acción */
+    /* Ajustado para el diseño de "Lista de Ventas" */
+    grid-template-columns: 80px 2fr 1.5fr 100px 80px auto; 
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee; /* Separador entre filas */
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+    gap: 10px; /* Espacio entre las columnas para mejor legibilidad */
+}
+
+/* Alineación de la columna de % Pago */
+.activity-list li > span:nth-child(5) {
+    text-align: center;
+}
+
+.activity-list li:last-child {
+    border-bottom: none; /* La última fila no tiene borde inferior */
+}
+
+/* Estilos para los encabezados de la lista (nueva fila para títulos de columna) */
+.activity-list .activity-header {
+    font-weight: 700; /* Negrita para los títulos */
+    color: var(--color-text-secondary); /* Color secundario para los títulos */
+    background-color: var(--color-card-bg); /* Fondo ligeramente diferente para el encabezado para distinguirlo */
+    border-top-left-radius: var(--border-radius); /* Bordes redondeados en la parte superior del encabezado */
+    border-top-right-radius: var(--border-radius);
+    padding: 15px 20px; /* Más padding para los encabezados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño para los títulos */
+    letter-spacing: 0.5px; /* Espaciado entre letras para los títulos */
+    position: sticky; /* Encabezado pegajoso al hacer scroll */
+    top: 0;
+    z-index: 1; /* Asegurar que esté por encima del contenido al hacer scroll */
+}
+
+/* Alineación del encabezado % Pago y Acción */
+.activity-list .activity-header span:nth-child(5), /* Encabezado de % Pago */
+.activity-list .activity-header span:nth-child(6) { /* Encabezado de Acción */
+    text-align: center;
+}
+
+
+/* Estilos para la información del cliente (nombre y contacto) */
+.activity-list .client-info {
+    display: flex;
+    flex-direction: column; /* Nombre y contacto uno debajo del otro */
+}
+.activity-list .client-info strong {
+    font-weight: 600; /* Negrita para el nombre del cliente */
+}
+.activity-list .client-info .client-contact {
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño para el contacto */
+    color: var(--color-text-secondary); /* Color secundario para el contacto */
+}
+
+/* Estilos para el botón "Ver más" */
+.ver-mas-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar el texto EN el botón */
+    background-color: #887278; /* Color oscuro por defecto, basado en la solicitud */
+    border: 1.5px solid #887278; /* Borde del mismo color */
+    color: white; /* Texto blanco por defecto */
+    font-size: 0.85rem; /* Tamaño de fuente ligeramente más pequeño */
+    font-weight: 600; /* Negrita */
+    cursor: pointer;
+    padding: 8px 15px; /* Padding ajustado */
+    border-radius: 20px; /* Bordes redondeados para el efecto de píldora */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave para el hover */
+    white-space: nowrap; /* Evitar que el texto se rompa en varias líneas */
+    min-width: 80px; /* Ancho mínimo para el botón */
+    justify-self: center; /* Centra el botón HORIZONTALMENTE dentro de su celda de la cuadrícula */
+}
+
+.ver-mas-button:hover {
+    background-color: transparent; /* Fondo transparente al pasar el ratón */
+    color: #887278; /* Texto al color del borde */
+    border-color: #887278; /* Borde al color del botón */
+}
+/* FIN DE LA SECCIÓN DE ESTILOS PARA LA NUEVA ESTRUCTURA DE ACTIVIDAD RECIENTE */
+
+
+/* SECCIÓN RESPONSIVE */
+@media (max-width: 767px) {
+    .app-container {
+        grid-template-columns: 1fr;
+    }
+
+    aside.sidebar {
+        height: auto;
+        padding-bottom: 12px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 12px;
+    }
+
+    .sidebar-logo {
+        flex-shrink: 0;
+        margin-right: 24px;
+    }
+
+    nav.sidebar-nav {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        overflow-x: auto;
+    }
+
+    .nav-list {
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .nav-list li {
+        margin-bottom: 0;
+    }
+
+    .nav-list li a {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    main.content {
+        padding: 20px 16px;
+    }
+
+    .summary-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Ajustes específicos para la lista de actividad en móviles */
+    .activity-list li {
+        grid-template-columns: 1fr 1fr; /* Simplificar a 2 columnas principales para móviles */
+        font-size: 0.85rem;
+        padding: 10px 15px;
+        gap: 5px;
+    }
+
+    .activity-list .activity-header {
+        display: none; /* Ocultar encabezados de la tabla en móviles para ahorrar espacio */
+    }
+
+    .activity-list li > span,
+    .activity-list li .client-info,
+    .activity-list li .ver-mas-button {
+        /* Asegurar que los elementos ocupen su espacio en la nueva cuadrícula y se alineen a la izquierda */
+        min-width: unset;
+        text-align: left;
+    }
+
+    .activity-list li .ver-mas-button {
+        grid-column: span 2; /* Que el botón ocupe las dos columnas en móvil */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        margin-top: 10px; /* Separación de los elementos superiores */
+    }
+}
+/* FIN SECCIÓN RESPONSIVE */
