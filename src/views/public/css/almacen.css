@@ -266,6 +266,26 @@
     font-size: 20px;
   }
 
+    /* Nuevo cliente button */
+  .btn-new-client {
+    background-color: #7e1b23;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: fit-content;
+    margin-bottom: 28px;
+    transition: background-color 0.3s ease;
+  }
+  .btn-new-client:hover {
+    background-color: white; /* Fondo blanco al pasar el mouse */
+    color: #7e1b23; /* Color de texto vinotinto al pasar el mouse */
+    border: 1px solid #7e1b23; /* Añadir un borde del color vinotinto para que se vea mejor */
+  } 
+
   /* RESPONSIVE */
   @media (max-width: 767px) {
     .app-container {
