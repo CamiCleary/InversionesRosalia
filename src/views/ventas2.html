@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lista de Clientes - Inversiones Rosalia's</title>
+<title>Ventas - Inversiones Rosalia's</title>
 <link rel="stylesheet" href="public/css/clientes.css">
 <style>
 
@@ -24,12 +24,12 @@
         
         <nav class="sidebar-nav" aria-label="Navegación principal">
           <ul class="nav-list">
-            <li><a href="inicio.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/inicio.png" alt="incio"  width="15"></span> Inicio</a></li>
-            <li><a href="clientes.html" class="active"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/clientes.png" alt="incio"  width="15"></span> Clientes</a></li>
-            <li><a href="produccion.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/produccion.png" alt="incio"  width="15"></span> Producción</a></li>
+            <li><a href="inicio2.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/inicio.png" alt="incio"  width="15"></span> Inicio</a></li>
+            <li><a href="clientes2.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/clientes.png" alt="incio"  width="15"></span> Clientes</a></li>
+            <li><a href="produccion2.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/produccion.png" alt="incio"  width="15"></span> Producción</a></li>
             <li><a href="contabilidad.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/contabilidad.png" alt="incio"  width="15"></span> Contabilidad</a></li>
             <li><a href="almacen.html" ><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/almacen.png" alt="incio"  width="15"></span> Almacén</a></li>
-            <li><a href="ventas.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/ventas.png" alt="incio"  width="15"></span> Ventas</a></li>
+            <li><a href="ventas2.html" class="active"><span class="material-icons sidebar-icon" aria-hidden="true"><img src="public/image/ventas.png" alt="incio"  width="15"></span> Ventas</a></li>
             </ul>
         </nav>
     </div>
@@ -43,9 +43,9 @@
     </aside>
 
     <main class="content" role="region" aria-label="Contenido principal - lista de clientes">
-      <h1 class="section-title">Lista de clientes</h1>
-      <a href="form-cliente.html">      
-        <button class="btn-new-client" type="button" aria-label="Agregar nuevo cliente">Nuevo cliente</button>
+      <h1 class="section-title">Ventas recientes</h1>
+      <a href="form-venta.html">
+        <button class="btn-new-client" type="button" aria-label="Agregar nuevo cliente">Añadir</button>
       </a>
 
       <div class="client-tabs" role="tablist" aria-label="Filtrar clientes">
@@ -54,25 +54,31 @@
 
       <section>
         <div class="clients-list" aria-label="Clientes registrados">
-          <div class="list-header">Clientes registrados</div>
+          <div class="list-header">Lista de Ventas</div>
           <div class="client-row">
-            <img class="client-avatar" src="#" alt="Avatar de Ana Ruiz" draggable="false" />
-            <div class="client-name">Ana Ruiz</div>
-           <div class="client-email">ana.ruiz@email.com</div>
-            <div class="client-last-activity">0412-4093207</div>
+            <img  draggable="false" />
+            <div class="client-name">Pedido #1</div>
+           <div class="client-email">Cliente: Laura G</div>
+            <div class="client-last-activity">Pendiente</div>
           </div>
           <div class="client-row">
-            <img class="client-avatar" src="#" alt="Avatar de Carlos Pérez" draggable="false" />
-            <div class="client-name">Carlos Pérez</div>
-            <div class="client-email">carlos.perez@email.com</div>
-            <div class="client-last-activity">0412-0669422</div>
+            <img  draggable="false" />
+            <div class="client-name">Pedido #2</div>
+            <div class="client-email">Cliente: Ana Ruiz</div>
+            <div class="client-last-activity">Pagada</div>
           </div>
           <div class="client-row">
-            <img class="client-avatar" src="#" alt="Avatar de Lucía Gómez" draggable="false" />
-            <div class="client-name">Lucía Gómez</div>
-            <div class="client-email">lucia.gomez@email.com</div>
-            <div class="client-last-activity">0412-5554822</div>
+            <img  draggable="false" />
+            <div class="client-name">Pedido #3</div>
+            <div class="client-email">Cliente: Maria S.</div>
+            <div class="client-last-activity">Enviada</div>
           </div>
+          <div class="client-row">
+            <img  draggable="false" />
+            <div class="client-name">Pedido #4</div>
+            <div class="client-email">Cliente: Pedro Pérez</div>
+            <div class="client-last-activity">Pendiente</div>
+          </div>          
         </div>
       </section>
 

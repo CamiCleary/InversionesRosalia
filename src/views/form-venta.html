@@ -3,46 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Venta - Rosalia's</title>
+    <title>Orden de Servicio - Rosalia's</title>
     <link rel="stylesheet" href="public/css/form-venta.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="btn-devolver-container">
-            <a href="ventas.html"><button class="btn-devolver">Devolver</button></a>
-        </div>
-        <h1>Registrar nueva Venta</h1>
-        <form class="login-form">
+    <div class="btn-devolver-container">
+        <a href="ventas2.html"><button class="btn-devolver">Devolver</button></a>
+    </div>
+    <div class="main-container">
+        <h1>Crear Orden de Servicio</h1>
+        <form class="order-form">
             <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre">
+                <label for="clientes">Porcentaje de Pago</label>
+                <select id="clientes" name="clientes" required>
+                    <option value="">--Seleccione al Cliente--</option>
+                    <option value="Ana Ruiz">Ana Ruiz</option>
+                    <option value="Lucia Gomez">Lucia Gomez</option>
+                    <option value="Pedro Perez">Pedro Pérez</option>
+                </select>
+            </div>            
+            <div class="form-group">
+                <label for="fechaActual">Fecha Actual</label>
+                <input type="date" id="fechaActual" name="fechaActual" required>
             </div>
+
             <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Ingresa el apellido">
+                <label for="fechaEntrega">Fecha de Entrega</label>
+                <input type="date" id="fechaEntrega" name="fechaEntrega" required>
             </div>
+
             <div class="form-group">
-                <label for="identificacion">Identificación</label>
-                <select name="identificacion" id="identificacion">
-                    <option value="V">V</option>
-                    <option value="E">E</option>
-                    <option value="J">J</option>                                        
+                <label for="nombrePrenda">Nombre de Prenda</label>
+                <input type="text" id="nombrePrenda" name="nombrePrenda" placeholder="Ej: Vestido de fiesta" required>
+            </div>
+
+            <div class="form-group">
+                <label for="porcentajePago">Porcentaje de Pago</label>
+                <select id="porcentajePago" name="porcentajePago" required>
+                    <option value="">--Seleccione un porcentaje--</option>
+                    <option value="50">50%</option>
+                    <option value="100">100%</option>
                 </select>
             </div>
+
             <div class="form-group">
-                <label for="documento">Documento</label>
-                <input type="text" id="documento" name="documento" placeholder="Ingresa el documento">
+                <label for="monto">Monto ($)</label>
+                <input type="number" id="monto" name="monto" placeholder="Ej: 150.00" step="0.01" required>
             </div>
+
             <div class="form-group">
-                <label for="telefeno">Teléfono</label>
-                <input type="number" id="telefeno" name="telefeno" placeholder="Ingresa su telefeno">
+                <label for="metodoPago">Método de Pago</label>
+                <select id="metodoPago" name="metodoPago" required>
+                    <option value="">Seleccione un método</option>
+                    <option value="pago_movil">Pago Móvil</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="transferencia">Transferencia</option>
+                </select>
             </div>
-            <div class="form-group">
-                <label for="dirección">Dirección</label>
-                <input type="text" id="dirección" name="dirección" placeholder="Ingresa su dirección">
-            </div>                        
-            <button type="submit" class="btn-submit">Añadir</button>
+
+            <button type="submit" class="btn-submit">Generar Orden</button>
         </form>
     </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); // Enero es 0!
+            var yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+            document.getElementById('fechaActual').value = today;
+        });
+    </script>
 </body>
 </html>

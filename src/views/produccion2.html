@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producción - Inversiones Rosalia's</title>
+    <link rel="stylesheet" href="public/css/inicio_produccion.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <aside class="sidebar" role="navigation" aria-label="Menú principal">
+            <div class="sidebar-logo">
+                <img src="public/image/logo.png" alt="Logo">
+                <div class="sidebar-title">Inversiones Rosalia`s</div>
+            </div>
+
+            <div>
+
+
+                <nav class="sidebar-nav" aria-label="Navegación principal">
+                    <ul class="nav-list">
+                        <li><a href="inicio2.html" class="active"><span class="material-icons sidebar-icon"
+                                    aria-hidden="true"><img src="public/image/inicio.png" alt="incio" width="15"></span>
+                                Inicio</a></li>
+                        <li><a href="clientes2.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img
+                                        src="public/image/clientes.png" alt="incio" width="15"></span> Clientes</a></li>
+                        <li><a href="produccion2.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img
+                                        src="public/image/produccion.png" alt="incio" width="15"></span> Producción</a>
+                        </li>
+                        <li><a href="contabilidad.html"><span class="material-icons sidebar-icon"
+                                    aria-hidden="true"><img src="public/image/contabilidad.png" alt="incio"
+                                        width="15"></span> Contabilidad</a></li>
+                        <li><a href="almacen.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img
+                                        src="public/image/almacen.png" alt="incio" width="15"></span> Almacén</a></li>
+                        <li><a href="ventas2.html"><span class="material-icons sidebar-icon" aria-hidden="true"><img
+                                        src="public/image/ventas.png" alt="incio" width="15"></span> Ventas</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sidebar-footer" aria-label="Información de usuario">
+                <img src="public/image/admin.jpg" alt="Avatar de Nervis Carpio" />
+                <div class="user-text">
+                    <div class="user-name">Nervis Carpio</div>
+                    <div class="user-role">Administradora</div>
+                </div>
+            </div>
+        </aside>
+
+         <main class="content" role="main">
+            <div class="top-navigation">
+                <div class="path">
+                    <span><strong>Producción</strong></span>
+                </div>
+            </div>
+
+            <!-- Sección de Resumen de Producción (sin cambios) -->
+            <section class="summary-section" aria-label="Resumen de Producción">
+                <h2 class="section-header">Resumen de Producción</h2>
+                <div class="summary-cards">
+                    <article class="summary-card" tabindex="0">
+                        <span class="card-icon"><i class="fas fa-boxes"></i></span>
+                        <p class="subtitle">Órdenes Activas</p>
+                        <strong>50</strong>
+                    </article>
+                    <article class="summary-card" tabindex="0">
+                        <span class="card-icon"><i class="fas fa-hourglass-half"></i></span>
+                        <p class="subtitle">En Proceso</p>
+                        <strong>15</strong>
+                    </article>
+                    <article class="summary-card" tabindex="0">
+                        <span class="card-icon"><i class="fas fa-check-circle"></i></span>
+                        <p class="subtitle">Completadas Hoy</p>
+                        <strong>8</strong>
+                    </article>
+                    <article class="summary-card" tabindex="0">
+                        <span class="card-icon"><i class="fas fa-warehouse"></i></span>
+                        <p class="subtitle">Stock Disponible</p>
+                        <strong>230 uni.</strong>
+                    </article>
+                </div>
+            </section>
+            <!-- Fin Sección de Resumen de Producción -->
+
+            <!-- SECCIÓN MODIFICADA: Actividad Reciente -->
+            <section class="recent-activity-section" aria-label="Actividad Reciente en Producción">
+                <h2 class="section-header">Actividad Reciente</h2>
+                <ul class="activity-list">
+                    <!-- Fila de encabezados de la tabla (NUEVO) -->
+                    <li class="activity-header">
+                        <span># Pedido</span>
+                        <span>Cliente</span>
+                        <span>Prenda</span>
+                        <span>Fecha</span>
+                        <span>% Pago</span>
+                        <span>Acción</span>
+                    </li>
+                    <!-- Ejemplo de un elemento de la lista modificado -->
+                    <li>
+                        <span>#1</span>
+                        <div class="client-info">
+                            <strong>Ana Ruiz</strong>
+                            <span class="client-contact">C.I.: 12.345.678 / Tel: 0412-1234567</span>
+                        </div>
+                        <span>Vestido de Noche</span>
+                        <span>10/06/2025</span>
+                        <span>50%  </span>
+                        <a href="diseno.html">
+                        <button class="ver-mas-button">Ver más</button>
+                        </a>
+                    </li>
+                    <li>
+                        <span>#2</span>
+                        <div class="client-info">
+                            <strong>Lucia G.</strong>
+                            <span class="client-contact">C.I.: 87.654.321 / Tel: 0424-5554822</span>
+                        </div>
+                        <span>Falda Casual</span>
+                        <span>09/06/2025</span>
+                        <span>100%</span>
+                        <a href="#">
+                        <button class="ver-mas-button">Ver más</button>
+                        </a>
+                    </li>
+                    <li>
+                        <span>#3</span>
+                        <div class="client-info">
+                            <strong>María S.</strong>
+                            <span class="client-contact">C.I.: 99.888.777 / Tel: 0416-5554444</span>
+                        </div>
+                        <span>Blusa Formal</span>
+                        <span>08/06/2025</span>
+                        <span>50%</span>
+                        <a href="#">
+                        <button class="ver-mas-button">Ver más</button>
+                        </a>
+                    </li>
+                    <li>
+                        <span>#3</span>
+                        <div class="client-info">
+                            <strong>Pedro Perez</strong>
+                            <span class="client-contact">C.I.: 31.107.621 / Tel: 0412-0360825</span>
+                        </div>
+                        <span>Camisa de Vestir</span>
+                        <span>13/06/2025</span>
+                        <span>50%</span>
+                        <a href="#">
+                        <button class="ver-mas-button">Ver más</button>
+                        </a>
+                    </li>                    
+                </ul>
+            </section>
+            <!-- FIN SECCIÓN MODIFICADA: Actividad Reciente -->
+
+        </main>
+    </div>
+</body>
+</html>
